@@ -1,0 +1,29 @@
+{
+  "name": "koishi-plugin-genshin-gacha",
+  "description": "I'm so TM rolls a lot",
+  "version": "0.0.0-placeholder",
+  "repository": "https://github.com/Lipraty/koishi-plugin-genshin-gacha",
+  "author": "Lipraty <i@lonay.me>",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "koishi": {
+    "description": {
+      "zh": "原神抽卡模拟器，并生成动画"
+    },
+    "preview": true
+  },
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.11.0"
+  }
+}
