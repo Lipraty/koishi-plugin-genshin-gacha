@@ -11,7 +11,11 @@ class GenshinGacha {
   } as const
 
   constructor(ctx: Context, config: GenshinGacha.Config) {
-
+    ctx.command('genshin.gacha [num]')
+      .alias('gacha', ...config.alias)
+      .action(async ({ session, options }) => {
+        
+      })
   }
 
   private select(pool: keyof typeof this.probability) {
@@ -35,8 +39,12 @@ class GenshinGacha {
 }
 
 namespace GenshinGacha {
-  export interface Config { }
-  export const Config: Schema<Config> = Schema.object({})
+  export interface Config {
+    alias: string[]
+  }
+  export const Config: Schema<Config> = Schema.object({
+    alias: Schema.array(String).default(['抽卡', '原神抽卡']).description('命令别名')
+  })
 }
 
 export default GenshinGacha
